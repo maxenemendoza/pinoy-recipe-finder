@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+body {
+  background-color: bisque !important; /* why need !important */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* for navbar */
+.navbar {
+  background-color: rgb(122, 87, 41);
+  border-bottom: 2px solid #e9ecef;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar-brand {
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text-center {
+  margin: 100px;
+  color: rgb(92, 65, 31);
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* for recipe card */
+.card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  object-fit: cover;
+  height: 240px !important; /* why need !important */
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+/* for buttons */
+.btn-primary {
+  background-color: rgb(122, 87, 41) !important; /* why need !important */
+  border: rgb(122, 87, 41) !important; /* why need !important */
+  transition: background-color 0.2s ease;
+  margin-bottom: 5px;
+}
+
+.btn-primary:hover {
+  /* add button */
+  background-color: rgb(92, 65, 31) !important; /* why need !important */
+}
+
+.btn-danger:hover {
+  /* remove button */
+  background-color: rgb(188, 22, 22) !important; /* why need !important */
+}
+
+/* for search bar */
+.form-control {
+  border-radius: 50px !important; /* why need !important */
+  border: 2px solid rgb(122, 87, 41) !important;
+  padding: 10px 15px !important; /* why need !important */
+  width: 50% !important;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* for recipe card*/
+.recipe-card {
+  width: 100%;
+  height: 100%;
+}
+
+/* for recipe page */
+.recipe-container {
+  margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.recipe-image {
+  display: block;
+  margin: 25px auto;
+  max-width: 700px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.recipe-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: rgb(92, 65, 31);
+  padding-top: 3rem;
+}
+
+.recipe-description {
+  text-align: center;
+  font-style: italic;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.recipe-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.recipe-ingredients,
+.recipe-instructions {
+  margin-top: 2rem;
+  flex: 1;
+  min-width: 250px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.recipe-ingredients h4,
+.recipe-instructions h4 {
+  font-weight: bold;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0.5rem auto;
+}
+
+.recipe .favorite-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-buttons {
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.mb-4 {
+  padding-top: 50px !important;
 }
